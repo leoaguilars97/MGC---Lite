@@ -28,3 +28,4 @@ $ pip install seaborn
 $ pip install -r requirements.txt
 
 ```
+pyinstaller --windowed ../main.py --additional-hooks=extrahooks
