@@ -1,0 +1,10 @@
+Lib/
+Scripts/
+db/
+img/*.png
+modelos/
+share/
+build
+dist
+main.spec
+__pycache__/
