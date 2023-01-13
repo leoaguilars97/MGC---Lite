@@ -9,12 +9,6 @@ from gui_reportes import crear_ventana_reportes
 from reportes import *
 from clasificador import predecir
 
-def imagen_por_defecto(): 
-  img = Image.open('./img/default_img.jpeg')
-  newimg = ImageTk.PhotoImage(img)
-  return newimg
-  # label.configure(image=newimg)
-  # label.image = newimg
 
 def mostrar_imagen(path, label, w, h):
     img = Image.open(path)
@@ -168,14 +162,10 @@ label_pred.place(relx=0.5, rely=0.5, anchor=CENTER)
 
 tabControl.pack(expand=1, fill="both", side=BOTTOM)
 
-mostrar_imagen('./img/default_img.jpeg', label_es, 1, 1)
-mostrar_imagen('./img/default_img.jpeg', label_em, 1, 1)
-mostrar_imagen('./img/default_img.jpeg', label_mf, 1, 1)
-mostrar_imagen('./img/default_img.jpeg', label_pred, 1, 1)
-
-
-
-# analizar_cancion('/Users/luisaguilar/Downloads/spanishromance.wav', 'cnn')
+mostrar_imagen('./img/default_img.png', label_es, 1, 1)
+mostrar_imagen('./img/default_img.png', label_em, 1, 1)
+mostrar_imagen('./img/default_img.png', label_mf, 1, 1)
+mostrar_imagen('./img/default_img.png', label_pred, 1, 1)
 
 root.geometry("500x500")
 
