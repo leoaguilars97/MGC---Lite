@@ -1,7 +1,6 @@
 Lib/
 Scripts/
 db/
-img/*.png
 modelos/
 share/
 build
