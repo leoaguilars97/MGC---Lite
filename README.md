@@ -3,29 +3,45 @@
 pydub
 ffmpeg -i input.mp4 output.avi
 
-# Comandos para iniciar
+# Comandos para instalar
 
 ```bash
-$ pip install pydub
+# *** Asumiendo que ya se tiene instalado python 3.6 y pip ***
 
-$ pip install numpy
+# --- Instalar y ejecutar el sistema ---
+$ pip install virtualenv
 
-$ pip install pandas
+# Crear un entorno virtual
+$ virtualenv -p python3.6 venv
 
-$ pip install matplotlib
+# Activar el entorno virtual
+$ source venv/bin/activate
 
-$ pip install tensorflow
-
-$ pip install -U scikit-learn
-
-$ pip install librosa
-
-$ pip install seaborn
-
-```
-
-```bash
+# Instalar las dependencias para Linux
 $ pip install -r requirements.txt
 
+# Instalar las dependencias para Windows
+$ pip install -r requirements_windows.txt
+
+# Ejecutar el programa
+$ python main.py
+
+# --- Limpiar la base de datos original ---
+$ python limpieza_datos.py
+
+# --- Entrenar a los modelos ---
+
+# Entrenar el modelo de la red neuronal convolucional
+$ python cnn.py
+
+# Entrenar el modelo de la red neuronal perceptron multicapa
+$ python mlp.py
+
+# --- Ejecutar la prueba de confiabilidad y desempeño ---
+$ python prueba_confiabilidad.py
+
+# --- Compilar el programa para Windows ---
+$ pip install pyinstaller
+$ pyinstaller --windowed main.py --additional-hooks=extrahooks
+
 ```
-pyinstaller --windowed ../main.py --additional-hooks=extrahooks
